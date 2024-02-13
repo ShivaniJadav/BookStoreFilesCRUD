@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "495f3f51-5893-4d4a-a030-8e22988024df",
+		"name": "Book Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19384663"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"regular_user\",\r\n    \"password\": \"user1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserDeleteBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicmVndWxhcl91c2VyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDc0NDgxNTEsImV4cCI6MTcwNzUzNDU1MX0.XBLySBdCRTO2WIcDnfmxZj8rh9vyBoTZptqv-9cP9IY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/deleteBook/The Da Vinci Code",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"deleteBook",
+						"The Da Vinci Code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserAddBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicmVndWxhcl91c2VyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDc0NDgxNTEsImV4cCI6MTcwNzUzNDU1MX0.XBLySBdCRTO2WIcDnfmxZj8rh9vyBoTZptqv-9cP9IY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Norwegian woods\",\r\n    \"auther\": \"Haruki murakami\",\r\n    \"year\": \"1989\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/addBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserGetBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoicmVndWxhcl91c2VyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MDc0NDgxNTEsImV4cCI6MTcwNzUzNDU1MX0.XBLySBdCRTO2WIcDnfmxZj8rh9vyBoTZptqv-9cP9IY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/home",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminDeleteBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW5fdXNlciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwNzQ0ODEyNCwiZXhwIjoxNzA3NTM0NTI0fQ.c77LX3M6B1trLvmrDjLp7o9i_gr9TjbSafiLRvsLFJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/deleteBook/Don quixote",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"deleteBook",
+						"Don quixote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminAddBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW5fdXNlciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwNzQ0ODEyNCwiZXhwIjoxNzA3NTM0NTI0fQ.c77LX3M6B1trLvmrDjLp7o9i_gr9TjbSafiLRvsLFJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"The girl with an umberella\",\r\n    \"auther\": \"durjoy dutta\",\r\n    \"year\": \"2019\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/addBook",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminGetBook",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW5fdXNlciIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcwNzQ0ODEyNCwiZXhwIjoxNzA3NTM0NTI0fQ.c77LX3M6B1trLvmrDjLp7o9i_gr9TjbSafiLRvsLFJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/home",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
